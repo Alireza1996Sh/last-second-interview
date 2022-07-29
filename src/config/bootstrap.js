@@ -8,6 +8,8 @@ import {
   BIconPerson,
   BIconQuestionCircle,
   BIconSearch,
+  BIconStar,
+  BIconStarFill,
   BImg,
   BInputGroup,
   BInputGroupText,
@@ -32,4 +34,6 @@ export function initBootstrapVue(Vue) {
   Vue.component("BIconPerson", BIconPerson);
   Vue.component("BIconBag", BIconBag);
   Vue.component("BIconSearch", BIconSearch);
+  Vue.component("BIconStarFill", BIconStarFill);
+  Vue.component("BIconStar", BIconStar);
 }
