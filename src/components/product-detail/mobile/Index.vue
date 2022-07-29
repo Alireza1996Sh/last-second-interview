@@ -18,6 +18,8 @@
     />
     <hr class="mt-0" />
     <ProductDescription class="mt-3" :description="product.description" />
+    <hr />
+    <ProductSpecifications :items="product.specifications" />
   </div>
 </template>
 
@@ -26,9 +28,11 @@ import HeaderMobile from "@/components/app/header/Mobile";
 import ProductRating from "@/components/product-detail/mobile/Rating";
 import ProductSection from "@/components/product-detail/mobile/Product";
 import ProductDescription from "@/components/product-detail/mobile/Description";
+import ProductSpecifications from "@/components/product-detail/mobile/Specifications";
 export default {
   name: "ProductDetailMobile",
   components: {
+    ProductSpecifications,
     ProductDescription,
     ProductSection,
     ProductRating,
@@ -55,6 +59,7 @@ export default {
         },
         description:
           "شرکت کاسترول به عنوان یکی از تولید کنندگان پیشرو در صنعت تولید روغن‌های روان کننده و گریس در سطح جهانی محسوب میشود",
+        specifications: ["گروانی: 10W-40", "حجم: ۴ لیتر", "روش ساخت: ۴ لیتر"],
       },
     };
   },
