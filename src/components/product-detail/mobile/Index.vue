@@ -42,17 +42,25 @@
 import HeaderMobile from "@/components/app/header/Mobile";
 import ProductRating from "@/components/product-detail/mobile/Rating";
 import ProductSection from "@/components/product-detail/mobile/Product";
-import ProductDescription from "@/components/product-detail/mobile/Description";
-import ProductSpecifications from "@/components/product-detail/mobile/Specifications";
-import ProductReview from "@/components/product-detail/mobile/Review";
-import ProductQA from "@/components/product-detail/mobile/QA";
+import lazyLoadComponent from "@/utils/lazy-load-component";
 export default {
   name: "ProductDetailMobile",
   components: {
-    ProductQA,
-    ProductReview,
-    ProductSpecifications,
-    ProductDescription,
+    ProductQA: lazyLoadComponent({
+      componentFactory: () => import("@/components/product-detail/mobile/QA"),
+    }),
+    ProductReview: lazyLoadComponent({
+      componentFactory: () =>
+        import("@/components/product-detail/mobile/Review"),
+    }),
+    ProductSpecifications: lazyLoadComponent({
+      componentFactory: () =>
+        import("@/components/product-detail/mobile/Specifications"),
+    }),
+    ProductDescription: lazyLoadComponent({
+      componentFactory: () =>
+        import("@/components/product-detail/mobile/Description"),
+    }),
     ProductSection,
     ProductRating,
     HeaderMobile,
