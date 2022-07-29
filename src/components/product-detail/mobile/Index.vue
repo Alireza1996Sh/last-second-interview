@@ -20,6 +20,12 @@
     <ProductDescription class="mt-3" :description="product.description" />
     <hr />
     <ProductSpecifications :items="product.specifications" />
+    <hr />
+    <ProductReview
+      :reviews="product.reviews"
+      :total-reviews="product.totalReviews"
+    />
+    <hr />
   </div>
 </template>
 
@@ -29,9 +35,11 @@ import ProductRating from "@/components/product-detail/mobile/Rating";
 import ProductSection from "@/components/product-detail/mobile/Product";
 import ProductDescription from "@/components/product-detail/mobile/Description";
 import ProductSpecifications from "@/components/product-detail/mobile/Specifications";
+import ProductReview from "@/components/product-detail/mobile/Review";
 export default {
   name: "ProductDetailMobile",
   components: {
+    ProductReview,
     ProductSpecifications,
     ProductDescription,
     ProductSection,
@@ -60,6 +68,29 @@ export default {
         description:
           "شرکت کاسترول به عنوان یکی از تولید کنندگان پیشرو در صنعت تولید روغن‌های روان کننده و گریس در سطح جهانی محسوب میشود",
         specifications: ["گروانی: 10W-40", "حجم: ۴ لیتر", "روش ساخت: ۴ لیتر"],
+        reviews: [
+          {
+            id: "id1",
+            title: "حمیدرضا افشار",
+            subtitle: "۲۰ خرداد ۱۳۹۹",
+            description:
+              "شاید در قدم اول، اینکه با روغن بری تو تعویض روغنی و صاحب مغازه چپ چپ بهت نگاه کنه، جالب نباشه، اما ارزش داره چون از اصالت روغنی که میخری مطمئن هستی",
+            likes: 56,
+            dislikes: 0,
+            isSuggested: true,
+          },
+          {
+            id: "id2",
+            title: "پیمان آقاخانی",
+            subtitle: "۲۴ خرداد ۱۳۹۹",
+            description:
+              "به نظر روغن مناسبی هست مخصوصا برای خودروهای وارداتی من برای پاجیرو ۳۸۰۰ و سوناتا ۲۰۰۸ استفاده کردم",
+            likes: 20,
+            dislikes: 5,
+            isSuggested: false,
+          },
+        ],
+        totalReviews: 20,
       },
     };
   },

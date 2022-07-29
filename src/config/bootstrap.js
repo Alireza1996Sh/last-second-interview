@@ -1,5 +1,6 @@
 // global bootstrap components and icons (tree-shaking)
 import {
+  BAvatar,
   BBreadcrumb,
   BButton,
   BFormInput,
@@ -17,6 +18,7 @@ import {
   BImg,
   BInputGroup,
   BInputGroupText,
+  CardPlugin,
   CarouselPlugin,
   LayoutPlugin,
 } from "bootstrap-vue";
@@ -25,6 +27,7 @@ export function initBootstrapVue(Vue) {
   // plugins
   Vue.use(LayoutPlugin);
   Vue.use(CarouselPlugin);
+  Vue.use(CardPlugin);
 
   // components
   Vue.component("BButton", BButton);
@@ -33,6 +36,7 @@ export function initBootstrapVue(Vue) {
   Vue.component("BInputGroup", BInputGroup);
   Vue.component("BInputGroupText", BInputGroupText);
   Vue.component("BBreadcrumb", BBreadcrumb);
+  Vue.component("BAvatar", BAvatar);
 
   // icons
   Vue.component("BIconList", BIconList);

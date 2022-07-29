@@ -13,19 +13,7 @@
     </b-carousel>
     <b-container fluid class="mt-3">
       <div class="d-flex align-items-center justify-content-between px-3">
-        <div>
-          <b-button
-            variant="light-blue"
-            class="text-blue font-weight-bold ml-2"
-          >
-            {{ popularity.likes }}
-            <b-icon-hand-thumbs-up />
-          </b-button>
-          <b-button variant="secondary" class="font-weight-bold">
-            {{ popularity.dislikes }}
-            <b-icon-hand-thumbs-down />
-          </b-button>
-        </div>
+        <Popularity :likes="popularity.likes" :dislikes="popularity.dislikes" />
         <div class="d-flex">
           <div
             v-for="(image, index) in images"
@@ -47,8 +35,10 @@
 </template>
 
 <script>
+import Popularity from "@/components/app/Popularity";
 export default {
   name: "ProductSection",
+  components: { Popularity },
   props: {
     images: { type: Array, required: true },
     title: { type: Object, required: true },
