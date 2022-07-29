@@ -1,16 +1,24 @@
 <template>
-  <div>
-    <div>product detail</div>
-    <b-button class="bg-light-blue text-blue border-0 mt-3">
-      test bootstrap working
-      <b-icon-cart variant="green" font-scale="1.25" />
-    </b-button>
-  </div>
+  <!-- use dynamic loading to prevent load extra js for not rendered component -->
+  <!-- this could be implemented with <component :is="computedComponent" /> -->
+  <ProductDetailMobile v-if="isMobile" />
+  <ProductDetailDesktop v-else />
 </template>
 
 <script>
 export default {
   name: "ProductDetailPage",
+  components: {
+    ProductDetailMobile: () =>
+      import("@/components/product-detail/mobile/Index"),
+    ProductDetailDesktop: () =>
+      import("@/components/product-detail/desktop/Index"),
+  },
+  computed: {
+    isMobile() {
+      return this.$mq === "sm";
+    },
+  },
 };
 </script>
 
