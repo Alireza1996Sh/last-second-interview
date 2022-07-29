@@ -10,7 +10,9 @@ import {
   BIconHandThumbsUp,
   BIconList,
   BIconPerson,
+  BIconQuestion,
   BIconQuestionCircle,
+  BIconReply,
   BIconSearch,
   BIconShare,
   BIconStar,
@@ -50,4 +52,6 @@ export function initBootstrapVue(Vue) {
   Vue.component("BIconBell", BIconBell);
   Vue.component("BIconHandThumbsUp", BIconHandThumbsUp);
   Vue.component("BIconHandThumbsDown", BIconHandThumbsDown);
+  Vue.component("BIconReply", BIconReply);
+  Vue.component("BIconQuestion", BIconQuestion);
 }

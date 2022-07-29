@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="pb-3">
     <!-- in real project header will be loaded in layout layer -->
     <!-- I loaded it here to not waste time unduly -->
     <HeaderMobile />
@@ -18,14 +18,23 @@
     />
     <hr class="mt-0" />
     <ProductDescription class="mt-3" :description="product.description" />
-    <hr />
+    <hr class="mx-4" />
     <ProductSpecifications :items="product.specifications" />
-    <hr />
+    <hr class="mx-4" />
     <ProductReview
       :reviews="product.reviews"
       :total-reviews="product.totalReviews"
     />
-    <hr />
+    <hr class="mx-4" />
+    <ProductQA :qas="product.qas" :total-qas="product.totalQas" />
+    <hr class="mx-4" />
+    <b-container fluid>
+      <div class="px-3">
+        <b-button variant="primary" block size="lg">
+          فروشندگان این کالا
+        </b-button>
+      </div>
+    </b-container>
   </div>
 </template>
 
@@ -36,9 +45,11 @@ import ProductSection from "@/components/product-detail/mobile/Product";
 import ProductDescription from "@/components/product-detail/mobile/Description";
 import ProductSpecifications from "@/components/product-detail/mobile/Specifications";
 import ProductReview from "@/components/product-detail/mobile/Review";
+import ProductQA from "@/components/product-detail/mobile/QA";
 export default {
   name: "ProductDetailMobile",
   components: {
+    ProductQA,
     ProductReview,
     ProductSpecifications,
     ProductDescription,
@@ -91,6 +102,15 @@ export default {
           },
         ],
         totalReviews: 20,
+        qas: [
+          {
+            id: "id1",
+            title: "بهنام بهرامی",
+            subtitle: "۲۰ خرداد ۱۳۹۹",
+            description: "سلام برای ۲۰۶ تیپ ۲ مدل ۹۰ مناسب هست؟",
+          },
+        ],
+        totalQas: 20,
       },
     };
   },
