@@ -16,6 +16,10 @@ body {
   direction: ltr;
 }
 
+.line-through {
+  text-decoration: line-through;
+}
+
 //customize breadcrumb style
 .breadcrumb-item {
   & + .breadcrumb-item::before {

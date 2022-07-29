@@ -6,6 +6,7 @@ import {
   BFormInput,
   BIconBag,
   BIconBell,
+  BIconCloud,
   BIconHandThumbsDown,
   BIconHandThumbsUp,
   BIconList,
@@ -54,4 +55,5 @@ export function initBootstrapVue(Vue) {
   Vue.component("BIconHandThumbsDown", BIconHandThumbsDown);
   Vue.component("BIconReply", BIconReply);
   Vue.component("BIconQuestion", BIconQuestion);
+  Vue.component("BIconCloud", BIconCloud);
 }

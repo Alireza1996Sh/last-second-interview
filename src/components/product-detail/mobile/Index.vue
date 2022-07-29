@@ -28,7 +28,8 @@
     <hr class="mx-4" />
     <ProductQA :qas="product.qas" :total-qas="product.totalQas" />
     <hr class="mx-4" />
-    <b-container fluid>
+    <ProductRelations :items="product.relations" />
+    <b-container fluid class="mt-3">
       <div class="px-3">
         <b-button variant="primary" block size="lg">
           فروشندگان این کالا
@@ -46,6 +47,10 @@ import lazyLoadComponent from "@/utils/lazy-load-component";
 export default {
   name: "ProductDetailMobile",
   components: {
+    ProductRelations: lazyLoadComponent({
+      componentFactory: () =>
+        import("@/components/product-detail/mobile/Relations"),
+    }),
     ProductQA: lazyLoadComponent({
       componentFactory: () => import("@/components/product-detail/mobile/QA"),
     }),
@@ -119,6 +124,24 @@ export default {
           },
         ],
         totalQas: 20,
+        relations: [
+          {
+            id: "id1",
+            image: require("@/assets/images/oil1.jpeg"),
+            title: "لاستیک خودرو کنتیننتال مدل CONTI SPORT CONTACT سایز ۲۴۵",
+            year: 2018,
+            basePrice: 3800000,
+            salePrice: 3040000,
+          },
+          {
+            id: "id2",
+            image: require("@/assets/images/oil2.jpeg"),
+            title: "لاستیک زتوم KL21 سایز 235/65R17",
+            year: 2021,
+            basePrice: 5800000,
+            salePrice: 4930000,
+          },
+        ],
       },
     };
   },
