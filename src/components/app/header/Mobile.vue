@@ -8,7 +8,7 @@
         <div class="w-100 text-center">
           <b-img
             style="width: 130px"
-            src="https://cdn.car.ir/resources/site/images/logo__light.png"
+            :src="require('@/assets/images/logo.png')"
           />
         </div>
         <b-button variant="transparent">

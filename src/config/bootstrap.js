@@ -4,21 +4,27 @@ import {
   BButton,
   BFormInput,
   BIconBag,
+  BIconBell,
+  BIconHandThumbsDown,
+  BIconHandThumbsUp,
   BIconList,
   BIconPerson,
   BIconQuestionCircle,
   BIconSearch,
+  BIconShare,
   BIconStar,
   BIconStarFill,
   BImg,
   BInputGroup,
   BInputGroupText,
+  CarouselPlugin,
   LayoutPlugin,
 } from "bootstrap-vue";
 
 export function initBootstrapVue(Vue) {
   // plugins
   Vue.use(LayoutPlugin);
+  Vue.use(CarouselPlugin);
 
   // components
   Vue.component("BButton", BButton);
@@ -36,4 +42,8 @@ export function initBootstrapVue(Vue) {
   Vue.component("BIconSearch", BIconSearch);
   Vue.component("BIconStarFill", BIconStarFill);
   Vue.component("BIconStar", BIconStar);
+  Vue.component("BIconShare", BIconShare);
+  Vue.component("BIconBell", BIconBell);
+  Vue.component("BIconHandThumbsUp", BIconHandThumbsUp);
+  Vue.component("BIconHandThumbsDown", BIconHandThumbsDown);
 }
