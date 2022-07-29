@@ -1,5 +1,7 @@
 # last-second-interview
 
+![last-second-sample.png](./last-second-sample.png)
+
 ## Project setup
 ```
 npm install

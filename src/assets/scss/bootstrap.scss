@@ -1,0 +1,17 @@
+$theme-colors: (
+        "dark": #222222,
+        "dark-2": #333333,
+        "dark-3": #444444,
+        "blue": #2286F1,
+        "light-blue": #DFEAF5,
+        "orange": #F18D22,
+        "light-orange": #F5EADF,
+        "green": #44AC68,
+        "light-green": #60B87F,
+        "light-green-2": #E3F3E8,
+        "red": #F13022,
+);
+$body-bg: #F7F7F7;
+
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
+@import 'node_modules/bootstrap-vue/src/index.scss';
