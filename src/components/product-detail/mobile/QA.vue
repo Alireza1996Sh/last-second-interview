@@ -20,7 +20,7 @@
           </template>
           <template #actions>
             <div class="d-flex justify-content-between flex-wrap">
-              <b-button variant="secondary" class="font-weight-bold">
+              <b-button variant="light" class="font-weight-bold border">
                 پاسخ دهید
                 <b-icon-reply />
               </b-button>

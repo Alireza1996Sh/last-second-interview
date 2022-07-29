@@ -4,7 +4,7 @@
       {{ likes }}
       <b-icon-hand-thumbs-up />
     </b-button>
-    <b-button variant="secondary" class="font-weight-bold">
+    <b-button variant="light" class="font-weight-bold border">
       {{ dislikes }}
       <b-icon-hand-thumbs-down />
     </b-button>

@@ -15,7 +15,8 @@
               {{ item.year }}
             </SkewedButton>
           </div>
-          <div>2</div>
+          <!-- placeholder for flags! (really flags?!) -->
+          <!-- <div>2</div> -->
         </div>
         <hr />
         <div class="d-flex justify-content-between align-items-center num-fa">
