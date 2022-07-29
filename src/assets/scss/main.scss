@@ -1,5 +1,12 @@
 html {
-  font-size: 14px
+  font-size: 14px;
+}
+
+body {
+  font-family: "yekan-bakh" ,-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+}
+.num-fa {
+  font-family: "yekan-bakh-num-fa","yekan-bakh" ,-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .rtl {
