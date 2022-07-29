@@ -1,0 +1,14 @@
+//customize breadcrumb style
+.breadcrumb-item {
+  & + .breadcrumb-item::before {
+  float: right !important;
+  padding: 0 0.5rem;
+  content: ">" !important;
+}
+  &, & a {
+    color: var(--gray);
+  }
+  &.active {
+    color: var(--orange)!important;
+  }
+}

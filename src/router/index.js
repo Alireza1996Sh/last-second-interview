@@ -1,5 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
+import HomeView from "@/views/HomeView";
 
 Vue.use(VueRouter);
 
@@ -7,11 +8,12 @@ const routes = [
   {
     path: "/",
     name: "home",
-    redirect: { name: "product-detail" },
+    component: HomeView,
   },
   {
     path: "/product-detail",
     name: "product-detail",
+    meta: { name: "جزییات محصول" },
     component: () =>
       import(
         /* webpackChunkName: "product-detail" */ "../views/ProductDetailView.vue"
