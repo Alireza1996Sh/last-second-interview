@@ -11,6 +11,7 @@ $theme-colors: (
         "light-green-2": #E3F3E8,
         "red": #F13022,
 );
+$body-bg: #F7F7F7;
 
 @import 'node_modules/bootstrap/scss/bootstrap.scss';
 @import 'node_modules/bootstrap-vue/src/index.scss';

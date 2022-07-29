@@ -1,5 +1,5 @@
 <template>
-  <div class="position-relative">
+  <div class="position-relative bg-white pb-3">
     <div class="notice-wrapper d-flex flex-column">
       <b-button variant="transparent" class="btn-outline-secondary">
         <b-icon-share />
