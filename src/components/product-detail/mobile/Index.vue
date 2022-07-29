@@ -16,6 +16,8 @@
       :title="product.title"
       :popularity="product.popularity"
     />
+    <hr class="mt-0" />
+    <ProductDescription class="mt-3" :description="product.description" />
   </div>
 </template>
 
@@ -23,9 +25,15 @@
 import HeaderMobile from "@/components/app/header/Mobile";
 import ProductRating from "@/components/product-detail/mobile/Rating";
 import ProductSection from "@/components/product-detail/mobile/Product";
+import ProductDescription from "@/components/product-detail/mobile/Description";
 export default {
   name: "ProductDetailMobile",
-  components: { ProductSection, ProductRating, HeaderMobile },
+  components: {
+    ProductDescription,
+    ProductSection,
+    ProductRating,
+    HeaderMobile,
+  },
   data() {
     return {
       product: {
@@ -45,6 +53,8 @@ export default {
           likes: 52,
           dislikes: 12,
         },
+        description:
+          "شرکت کاسترول به عنوان یکی از تولید کنندگان پیشرو در صنعت تولید روغن‌های روان کننده و گریس در سطح جهانی محسوب میشود",
       },
     };
   },

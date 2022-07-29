@@ -13,6 +13,19 @@
     </b-carousel>
     <b-container fluid class="mt-3">
       <div class="d-flex align-items-center justify-content-between px-3">
+        <div>
+          <b-button
+            variant="light-blue"
+            class="text-blue font-weight-bold ml-2"
+          >
+            {{ popularity.likes }}
+            <b-icon-hand-thumbs-up />
+          </b-button>
+          <b-button variant="secondary" class="font-weight-bold">
+            {{ popularity.dislikes }}
+            <b-icon-hand-thumbs-down />
+          </b-button>
+        </div>
         <div class="d-flex">
           <div
             v-for="(image, index) in images"
@@ -21,19 +34,6 @@
             :class="[index === selectedImage && 'image-indicator-active']"
             @click="selectedImage = index"
           />
-        </div>
-        <div>
-          <b-button variant="secondary" class="font-weight-bold">
-            {{ popularity.dislikes }}
-            <b-icon-hand-thumbs-down />
-          </b-button>
-          <b-button
-            variant="light-blue"
-            class="text-blue font-weight-bold ml-2"
-          >
-            {{ popularity.likes }}
-            <b-icon-hand-thumbs-up />
-          </b-button>
         </div>
       </div>
       <div class="font-weight-bold mt-4 text-right px-3">
